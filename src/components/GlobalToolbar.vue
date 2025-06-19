@@ -1,8 +1,9 @@
 <template>
   <div data-tauri-drag-region class="amcl-toolbar">
     <span data-tauri-drag-region v-if="!isMacOS" class="amcl-toolbar-title">
-      Armoe Minecraft Launcher v{{ appVersion }}
+      AMCL v{{ appVersion }}
     </span>
+    <!-- 新模块暂时留空 -->
     <n-button-group class="amcl-toolbar-button">
       <n-button v-if="!isHomePath()" quaternary @click="backToParent">
         <font-awesome-icon icon="fa-solid fa-arrow-left" />
@@ -55,29 +56,35 @@ onMounted(() => {
 <style lang="scss" scoped>
 .amcl-toolbar {
   color: white;
-  height: 30px;
+  height: 50px;
   display: flex;
+  align-items: center;
   position: relative;
   background-color: var(--primary-color);
+  padding: 0 16px;
+  /* 让内容左右分布 */
+  justify-content: space-between;
 }
 
 .amcl-toolbar-title {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 12px;
-  margin: 0 auto;
+  font-size: 16px;
+  margin-right: 24px;
+  line-height: 50px;
 }
 
 .amcl-toolbar-button {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  display: flex;
+  gap: 8px;
   button {
-    height: 30px;
+    height: 40px;
+    width: 40px;
     color: white !important;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

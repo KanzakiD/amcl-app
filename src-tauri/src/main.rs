@@ -13,8 +13,8 @@ fn main() {
             window.set_decorations(false).unwrap();
             window
                 .set_size(Size::Physical(PhysicalSize {
-                    width: 820,
-                    height: 461,
+                    width: 920,
+                    height: 520,
                 }))
                 .unwrap();
         }

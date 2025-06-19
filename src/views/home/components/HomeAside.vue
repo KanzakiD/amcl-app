@@ -44,7 +44,7 @@
     </div>
     <div v-else>
       <n-space vertical>
-        <img style="width: 48px; height;: 48px" src="/icon.svg" />
+        <img style="width: 48px; height: 48px" src="/icon.svg" />
         <span>
           {{ game }}
         </span>
@@ -200,6 +200,10 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
+.amcl-home-profile-card {
+  @extend .amcl-home-base-crad;
+  top: 60px;
+}
 .amcl-home-base-crad {
   background-color: var(--amcl-home-card-bg-color);
   left: 13px;
@@ -207,11 +211,6 @@ onMounted(async () => {
   text-align: center;
   width: 320px;
 }
-.amcl-home-profile-card {
-  @extend .amcl-home-base-crad;
-  top: 43px;
-}
-
 .amcl-home-profile-avatar {
   width: 48px;
   height: 48px;

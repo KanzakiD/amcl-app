@@ -73,12 +73,11 @@
     "windows": [
       {
         "title": "Armoe Minecraft Launcher",
-        "width": 820,
-        "height": 461,
-        "visible": false,
+        "width": 920,
+        "height": 520,
+        "decorations": false,
         "center": true,
-        "resizable": false,
-        "titleBarStyle": "Overlay"
+        "resizable": false
       }
     ]
   }
